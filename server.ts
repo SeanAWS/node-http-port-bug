@@ -44,7 +44,7 @@ function createServer() {
 }
 
 const closeServer = async (server: Server): Promise<void> =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     server.on("close", () => {
       console.log("🛑 Stopping server completed!");
       resolve();
